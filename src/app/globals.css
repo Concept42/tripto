@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Trebuchet-MS";
+  src: url("/fonts/Trebuchet-MS.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Trebuchet-MS";
+  src: url("/fonts/Trebuchet-MS-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Trebuchet-MS";
+  src: url("/fonts/Trebuchet-MS-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@layer utilities {
+  h1 {
+    @apply text-h4 text-neutrals-black xl:text-h1;
+  }
+  h2 {
+    @apply text-h5 font-bold text-neutrals-black xl:text-h2;
+  }
+  h3 {
+    @apply text-h5 text-neutrals-black xl:text-h3;
+  }
+  h4 {
+    @apply text-h6 font-bold text-neutrals-black xl:text-h4;
+  }
+  h5 {
+    @apply text-b1 font-bold text-neutrals-black xl:text-h5;
+  }
+  h6 {
+    @apply text-b1 text-neutrals-black xl:text-h6;
+  }
+  p {
+    @apply text-b1 text-neutrals-black;
+  }
+}
+
+@layer utilities {
+  .pageContainer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 1280px) {
+    .pageContainer {
+      max-width: 1272px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+:root {
+  --colors-primary-tertiary: #01232b;
+  --colors-primary-oceanBlue: #0092b3;
+  --colors-primary-mistyBlue: #a9cfe4;
+  --colors-primary-skyBlue: #ddeff9;
+  --colors-primary-icyBlue: #e9f7ff;
+  --colors-neutral-black: #0a0f26;
+  --colors-neutral-grey100: #292a40;
+  --colors-neutral-grey80: #464760;
+  --colors-neutral-grey60: #636588;
+  --colors-neutral-grey40: #8789a8;
+  --colors-neutral-grey20: #afb1c5;
+  --colors-neutral-grey10: #d7d8e2;
+  --colors-neutral-grey05: #f5f5fb;
+  --colors-neutral-white: #ffffff;
+}
+
+body {
+  font-family: "Trebuchet-MS", sans-serif;
+}
+
+.slide-list {
+  width: 100dvw !important;
+}
+.hidescrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hidescrollbar::-webkit-scrollbar {
+  display: none;
+}
